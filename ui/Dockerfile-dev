@@ -5,7 +5,7 @@ WORKDIR /usr/src/app/app-ui
 COPY . .
 ENV NODE_OPTIONS=--openssl-legacy-provider
 
-RUN npm ci && npm run build -- --prod
+RUN npm ci --legacy-peer-deps && npm run build -- --prod
 
 COPY . .
 
